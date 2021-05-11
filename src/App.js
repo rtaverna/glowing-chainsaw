@@ -1,39 +1,48 @@
 import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
-import HomePhotos from './HomePhotos';
-import ContactForm from './ContactForm';
-import AllPhotos from './AllPhotos';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home';
+import ContactForm from './components/ContactForm';
+import View from './components/View';
+import winterImages from './styles/winterImages';
+import springImages from './styles/springImages';
 
 function App() {
   return (
     <Router>
       <div className="App">
-      <Navbar bg="light" variant="light">
-        <Navbar.Brand href="/" >Misha Belov <span className="russ">| Миша белов</span></Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="all">All <span className="russ">| все</span></Nav.Link>
-          <Nav.Link href="contact">Contact <span className="russ">| связаться</span></Nav.Link>
-        </Nav>
-      </Navbar>
+        <Navbar bg="light" variant="light">
+          <Nav className="mr-auto">
+            <Navbar.Brand href="/">Misha Belov <span className="russ">| Миша белов</span></Navbar.Brand>
+            <NavDropdown title="Albums | альбомы" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/winter2020">Winter 2020 <span className="russ">| Зима 2020</span></NavDropdown.Item>
+              <NavDropdown.Item href="/spring2021">Spring 2021 <span className="russ">| весна 2021</span></NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="contact">Contact <span className="russ">| связаться</span></Nav.Link>
+          </Nav>
+        </Navbar>
       
-      <Switch>
-          <Route path="/all">
-            <AllPhotos />
+        <Switch>
+          <Route path="/winter2020">
+            <View album={'winter'} photos={winterImages}/>
+          </Route>
+          <Route path="/spring2021">
+            <View album={'spring'} photos={springImages}/>
           </Route>
           <Route path="/contact">
             <ContactForm />
           </Route>
           <Route path="/">
-            <HomePhotos />
+            <Home />
           </Route>
         </Switch>
-    </div>
+      </div>
     </Router>
   );
 }

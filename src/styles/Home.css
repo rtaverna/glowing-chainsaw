@@ -1,0 +1,37 @@
+#pixsec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+#pixblock-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#pixblock-2 {
+  height: 100%;
+}
+
+img {
+  margin: 8px;
+}
+p#insta-tag {
+  text-align: left;
+  margin-left: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(134, 129, 129);
+}
+
+span.russ {
+  font-weight: lighter;
+}
+
+#instagram  {
+  font-weight: bold;
+}

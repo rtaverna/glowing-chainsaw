@@ -1,0 +1,28 @@
+div.carousel-caption  {
+    position: unset;
+    color:rgb(174, 175, 177);
+}
+
+a.carousel-control-prev  {
+    top: 50%;
+    left: 10%;
+    width: 3%;
+    background-color: rgb(207, 204, 204);
+    height: 5%;
+}
+  
+a.carousel-control-next  {
+    top: 50%;
+    right: 10%;
+    width: 3%;
+    background-color: gainsboro;
+    height: 5%;
+}
+
+.carousel-indicators  {
+    display: none;
+}
+
+p{
+    text-align: center;
+}

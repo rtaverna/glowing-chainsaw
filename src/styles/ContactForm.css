@@ -1,0 +1,25 @@
+div.container {
+  max-width: 12000px;
+}
+
+div.col {
+  align-items: center;
+}
+
+.row  {
+  align-items: center;
+}
+
+.ContactForm  {
+  width: 60%;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.form-control.formInput {
+  margin: 5px;
+}
+
+.submit-btn {
+  outline: none;
+}
